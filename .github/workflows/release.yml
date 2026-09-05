@@ -1,0 +1,62 @@
+name: Release
+
+# Every push to main bumps VERSION (patch), tags it, and publishes a
+# GitHub Release recording what changed since the last one — see
+# /releases. This is a pure static site, so there's nothing to build or
+# attach; the release exists purely as a versioned changelog. Commits made
+# by this workflow itself carry "[skip release]" to avoid re-triggering.
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    if: "!contains(github.event.head_commit.message, '[skip release]')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - id: bump
+        run: |
+          current="$(cat VERSION)"
+          IFS='.' read -r major minor patch <<< "$current"
+          new="$major.$minor.$((patch + 1))"
+          echo "$new" > VERSION
+          echo "version=$new" >> "$GITHUB_OUTPUT"
+          echo "tag=v$new" >> "$GITHUB_OUTPUT"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add VERSION
+          git commit -m "chore: bump version to $new [skip release]"
+          git tag "v$new"
+          git push origin HEAD:main
+          git push origin "v$new"
+
+      - id: changelog
+        run: |
+          prev_tag="$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")"
+          if [ -n "$prev_tag" ]; then
+            log="$(git log "$prev_tag"..HEAD^ --pretty='- %s' | grep -v '^- chore: bump version' || true)"
+          else
+            log="$(git log HEAD^ --pretty='- %s' | grep -v '^- chore: bump version' || true)"
+          fi
+          {
+            echo "log<<GHRELEASE_EOF"
+            echo "$log"
+            echo "GHRELEASE_EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.bump.outputs.tag }}
+          name: DeepScan Showcase ${{ steps.bump.outputs.version }}
+          body: |
+            ## DeepScan Showcase Site — v${{ steps.bump.outputs.version }}
+
+            ${{ steps.changelog.outputs.log }}
