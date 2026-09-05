@@ -370,8 +370,12 @@ footer a { text-decoration: underline; }
   color: var(--gray-mid);
   font-style: italic;
   max-width: 480px;
-  margin: 0 auto 80px;
+  margin: 0 auto 16px;
   line-height: 1.6;
+}
+
+.download-note:last-of-type {
+  margin-bottom: 80px;
 }
 
 @media (max-width: 640px) {
