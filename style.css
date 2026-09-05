@@ -185,6 +185,26 @@ nav.site-nav {
   margin-bottom: 14px;
 }
 
+/* Square, self-looping demo clip per step — muted autoplay video instead
+   of an actual .gif file: same "just replays by itself" effect the eye
+   sees, at a fraction of the file size and with far less banding/noise
+   than GIF's 256-color palette. */
+.how-step-media {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  margin: 4px 0 18px;
+  border: 1px solid var(--rule-strong);
+  background: var(--gray-soft);
+  overflow: hidden;
+}
+
+.how-step-media video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .how-step h3 {
   font-size: 1.2rem;
   font-weight: 600;
@@ -288,6 +308,7 @@ footer {
   height: 34px;
   border-radius: 50%;
   object-fit: cover;
+  margin-top: 16px;
   margin-bottom: 16px;
 }
 
