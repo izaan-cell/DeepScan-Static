@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Download DeepScan</title>
+<meta name="description" content="Download DeepScan for macOS or Windows — free, local, offline file search." />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='white' stroke='black' stroke-width='2'/%3E%3Cpath d='M16 2 A14 14 0 0 1 16 30 Z' fill='black'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="site-nav wrap">
+  <a class="brand" href="/">
+    <span class="glyph" aria-hidden="true"></span>
+    <span class="wordmark"><span class="bold">Deep</span><span class="light">Scan</span></span>
+  </a>
+  <a class="nav-download" href="/download">Download</a>
+</nav>
+
+<header class="download-hero wrap">
+  <h1>Choose your platform</h1>
+  <p>Free, offline, no account needed.</p>
+</header>
+
+<section class="wrap">
+  <div class="platform-grid">
+    <div class="platform-card" id="card-mac">
+      <svg class="os-icon" viewBox="0 0 384 512" aria-hidden="true">
+        <path fill="black" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
+      </svg>
+      <h2>macOS</h2>
+      <p class="os-sub">DeepScan.dmg</p>
+      <a class="btn btn-primary" href="https://github.com/izaan-cell/DeepScan/releases/latest/download/DeepScan.dmg">Download for Mac</a>
+    </div>
+
+    <div class="platform-card" id="card-windows">
+      <svg class="os-icon" viewBox="0 0 448 512" aria-hidden="true">
+        <path fill="black" d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/>
+      </svg>
+      <h2>Windows</h2>
+      <p class="os-sub">DeepScan.msi</p>
+      <a class="btn btn-primary" href="https://github.com/izaan-cell/DeepScan/releases/latest/download/DeepScan.msi">Download for Windows</a>
+    </div>
+  </div>
+
+  <p class="download-note">Both installers are unsigned right now — macOS and Windows will
+  warn about an unidentified developer on first launch. DeepScan never phones home; the
+  source is fully readable on GitHub.</p>
+</section>
+
+<footer class="wrap">
+  <p>DeepScan is free and open source. <a href="https://github.com/izaan-cell/DeepScan">View the source</a>.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
