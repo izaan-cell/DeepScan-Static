@@ -44,14 +44,12 @@ nav.site-nav {
   text-decoration: none;
 }
 
-.brand .glyph {
-  width: 22px;
-  height: 22px;
+.brand-logo {
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  border: 1.5px solid var(--ink);
-  background: conic-gradient(var(--ink) 0deg 180deg, var(--paper) 180deg 360deg);
-  transform: rotate(-45deg);
   flex-shrink: 0;
+  object-fit: cover;
 }
 
 .brand .wordmark {
@@ -82,8 +80,16 @@ nav.site-nav {
 /* ---------- Hero ---------- */
 
 .hero {
-  padding: 110px 0 90px;
+  padding: 90px 0 90px;
   text-align: center;
+}
+
+.hero-logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 36px;
 }
 
 .hero h1 {
@@ -145,6 +151,104 @@ nav.site-nav {
   font-style: italic;
 }
 
+/* ---------- Section title ---------- */
+
+.section-title {
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin: 0 0 56px;
+}
+
+/* ---------- How it works ---------- */
+
+.how {
+  padding: 90px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.how-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+.how-step {
+  text-align: center;
+}
+
+.step-num {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--gray-mid);
+  font-style: italic;
+  margin-bottom: 14px;
+}
+
+.how-step h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.how-step p {
+  font-size: 0.95rem;
+  color: var(--gray-mid);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---------- File types ---------- */
+
+.filetypes {
+  padding: 90px 0;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.pill {
+  font-size: 0.95rem;
+  padding: 10px 22px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+}
+
+/* ---------- Privacy ---------- */
+
+.privacy {
+  padding: 90px 0;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+}
+
+.privacy-copy {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--gray-mid);
+  font-style: italic;
+}
+
+/* ---------- Closing CTA ---------- */
+
+.closing {
+  padding: 90px 0 100px;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+}
+
+.closing .lede {
+  margin-bottom: 32px;
+}
+
 /* ---------- Feature strip ---------- */
 
 .features {
@@ -173,10 +277,18 @@ nav.site-nav {
 
 footer {
   border-top: 1px solid var(--rule);
-  padding: 32px 0;
+  padding: 40px 0;
   text-align: center;
   font-size: 0.85rem;
   color: var(--gray-mid);
+}
+
+.footer-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
 }
 
 footer a { text-decoration: underline; }
@@ -265,5 +377,6 @@ footer a { text-decoration: underline; }
 @media (max-width: 640px) {
   .hero h1 { font-size: 2.4rem; }
   .features { grid-template-columns: 1fr; }
+  .how-steps { grid-template-columns: 1fr; }
   .platform-grid { grid-template-columns: 1fr; }
 }

@@ -8,9 +8,10 @@
 
 <meta property="og:title" content="DeepScan" />
 <meta property="og:description" content="Search every file on your computer with a phrase, a code snippet, or an image — 100% local, 100% free." />
+<meta property="og:image" content="/assets/deepscan-logo.png" />
 <meta property="og:type" content="website" />
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='white' stroke='black' stroke-width='2'/%3E%3Cpath d='M16 2 A14 14 0 0 1 16 30 Z' fill='black'/%3E%3C/svg%3E" />
+<link rel="icon" type="image/png" href="/assets/favicon.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,13 +22,14 @@
 
 <nav class="site-nav wrap">
   <a class="brand" href="/">
-    <span class="glyph" aria-hidden="true"></span>
+    <img class="brand-logo" src="/assets/deepscan-logo.png" alt="DeepScan" />
     <span class="wordmark"><span class="bold">Deep</span><span class="light">Scan</span></span>
   </a>
   <a class="nav-download" href="/download">Download</a>
 </nav>
 
 <header class="hero wrap">
+  <img class="hero-logo" src="/assets/deepscan-logo.png" alt="DeepScan" />
   <h1>Find anything on your computer<br />without typing the exact words.</h1>
   <p class="lede">A phrase, a code snippet, or a dropped-in image — DeepScan searches every
   file on your machine by what it means, not just its name.</p>
@@ -36,6 +38,43 @@
   </div>
   <p class="fine-print">Free · No account · Works fully offline</p>
 </header>
+
+<section class="how wrap">
+  <h2 class="section-title">How it works</h2>
+  <div class="how-steps">
+    <div class="how-step">
+      <span class="step-num">01</span>
+      <h3>Say what you mean</h3>
+      <p>Type a phrase, paste a code snippet, or drop in an image — whatever
+      form the thing you're looking for takes.</p>
+    </div>
+    <div class="how-step">
+      <span class="step-num">02</span>
+      <h3>DeepScan understands it</h3>
+      <p>Local AI models turn your query and every indexed file into
+      vectors, then match by meaning — not filenames or keywords.</p>
+    </div>
+    <div class="how-step">
+      <span class="step-num">03</span>
+      <h3>Jump straight to the file</h3>
+      <p>Reveal any result in Finder or Explorer with one click — no
+      digging through folders.</p>
+    </div>
+  </div>
+</section>
+
+<section class="filetypes wrap">
+  <h2 class="section-title">One search bar, every file type</h2>
+  <div class="pill-row">
+    <span class="pill">Images &amp; icons</span>
+    <span class="pill">Code &amp; scripts</span>
+    <span class="pill">PDFs &amp; documents</span>
+    <span class="pill">Spreadsheets</span>
+    <span class="pill">Scanned pages (OCR)</span>
+    <span class="pill">Audio</span>
+    <span class="pill">Video</span>
+  </div>
+</section>
 
 <section class="features wrap">
   <div class="feature">
@@ -55,7 +94,25 @@
   </div>
 </section>
 
+<section class="privacy wrap">
+  <h2 class="section-title">Why local matters</h2>
+  <p class="privacy-copy">Most search that "understands" your files sends them somewhere
+  first. DeepScan doesn't — every model runs on your machine, every index lives in a
+  database on your disk, and nothing is ever uploaded. Turn off your Wi-Fi and it still
+  works exactly the same. There's no account to make because there's no server to make
+  an account on.</p>
+</section>
+
+<section class="closing wrap">
+  <h2 class="section-title">Ready when you are</h2>
+  <p class="lede">One download, no setup beyond dragging it into Applications.</p>
+  <div class="cta-row">
+    <a class="btn btn-primary" href="/download">Download DeepScan</a>
+  </div>
+</section>
+
 <footer class="wrap">
+  <img class="footer-logo" src="/assets/deepscan-logo.png" alt="DeepScan" />
   <p>DeepScan is free and open source. <a href="https://github.com/izaan-cell/DeepScan">View the source</a>.</p>
 </footer>
 
