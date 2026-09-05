@@ -1,4 +1,4 @@
-// Highlights the download card matching the visitor's OS. Cosmetic only —
+// Highlights the download card matching the visitor's OS. Cosmetic only,
 // both download links are always present and clickable either way.
 (function () {
   const platform = navigator.platform || navigator.userAgent || "";

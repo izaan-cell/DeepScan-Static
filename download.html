@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Download DeepScan</title>
-<meta name="description" content="Download DeepScan for macOS or Windows — free, local, offline file search." />
+<meta name="description" content="Download DeepScan for macOS or Windows, a free AI search app for your files." />
 
 <link rel="icon" type="image/png" href="/assets/favicon.png" />
 
@@ -36,7 +36,12 @@
       </svg>
       <h2>macOS</h2>
       <p class="os-sub">DeepScan.dmg</p>
-      <a class="btn btn-primary" href="https://github.com/izaan-cell/DeepScan/releases/latest/download/DeepScan.dmg" download>Download for Mac</a>
+      <!-- Temporary: served same-origin from downloads/ while this build has
+           no bundled models (small enough for git). Once a real
+           model-bundled build exists, pull the file from the repo and point
+           this back at the GitHub Releases URL:
+           https://github.com/izaan-cell/DeepScan/releases/latest/download/DeepScan.dmg -->
+      <a class="btn btn-primary" href="/downloads/DeepScan.dmg" download>Download for Mac</a>
     </div>
 
     <div class="platform-card" id="card-windows">
@@ -49,7 +54,7 @@
     </div>
   </div>
 
-  <p class="download-note">Both installers are unsigned right now — macOS and Windows will
+  <p class="download-note">Both installers are unsigned right now, macOS and Windows will
   warn about an unidentified developer on first launch. DeepScan never phones home; the
   source is fully readable on GitHub.</p>
 </section>

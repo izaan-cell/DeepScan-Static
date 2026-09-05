@@ -1,4 +1,4 @@
-/* DeepScan showcase site — strict black & white, literary-editorial. */
+/* DeepScan showcase site, strict black & white, literary-editorial. */
 
 :root {
   --ink: #000000;
@@ -220,15 +220,15 @@ nav.site-nav {
   border-radius: 999px;
 }
 
-/* ---------- Privacy ---------- */
+/* ---------- Examples ---------- */
 
-.privacy {
+.examples {
   padding: 90px 0;
   border-top: 1px solid var(--rule);
   text-align: center;
 }
 
-.privacy-copy {
+.examples-copy {
   max-width: 640px;
   margin: 0 auto;
   font-size: 1.1rem;
