@@ -1,2 +1,5 @@
 .DS_Store
 .vercel
+# GitHub blocks any git-tracked file over 100MB — DeepScan.msi (265MB) has
+# to live as a release asset only (see `gh release upload`), never a commit.
+downloads/DeepScan.msi
