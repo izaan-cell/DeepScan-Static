@@ -1,5 +1,10 @@
 .DS_Store
 .vercel
-# GitHub blocks any git-tracked file over 100MB — DeepScan.msi (265MB) has
-# to live as a release asset only (see `gh release upload`), never a commit.
+# GitHub blocks any git-tracked file over 100MB — DeepScan.msi (265MB) and
+# DeepScan.dmg (now 359MB, since bundling CLIP's text encoder) both have
+# to live as release assets only (see `gh release upload`), never a commit.
+# The Mac/Windows download buttons on the site link straight to the app
+# repo's own GitHub Release now — these copies here are only for this
+# repo's own release (`gh release upload`), not served by the site itself.
 downloads/DeepScan.msi
+downloads/DeepScan.dmg
